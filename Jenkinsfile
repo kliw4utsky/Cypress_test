@@ -20,10 +20,10 @@ pipeline {
                 script {
                     parallel(
                         "Test 1": {
-                            sh 'npm run cypress:ci'
+                            sh 'echo 1111 | sudo -S npm run cypress:ci'
                         },
                         "Test 2": {
-                            sh 'npm run cypress2:ci'
+                            sh 'echo 1111| sudo -S npm run cypress2:ci'
                         }
                     )
                 }
